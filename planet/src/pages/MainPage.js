@@ -1,6 +1,6 @@
 import React from 'react';
 import {View,Text, SafeAreaView,StyleSheet,Image} from 'react-native';
-
+import Merkur from  "./Merkur"
 
 const MainPage =()=>{
  
@@ -19,17 +19,21 @@ const MainPage =()=>{
         </View>   
 
          <View>
-             <Text>Planet List</Text>
-              <Image style={styles.imageStyle} source={require("./images/merkur.png")}></Image>
-        </View>     
-        
+          <Text > {"\n"}Planet List</Text>
+              <View>
+                <Image style={styles.planetStyle} source={require("./images/merkur.png")}></Image>
+                <Text sytle={styles.planetInnerStyle}>Mercury</Text>
+              </View> 
+              
+          </View>
+      
     </SafeAreaView>
   )
 }
 export default MainPage;
 const styles=StyleSheet.create({
   container:{     
-    margin:15,
+    marginLeft:15,
   },
   
   textStyle:{
@@ -39,11 +43,17 @@ const styles=StyleSheet.create({
  
   imageStyle:{
     marginTop:7,
-    maxHeight:300,
-    maxWidth:370,
+    height:300,
+    width:370,
     borderWidth:2,
     borderRadius:10
   },
- 
+ planetStyle:{
+   height:120,
+   width:120,
+   
+ },
+
+
 
 });
