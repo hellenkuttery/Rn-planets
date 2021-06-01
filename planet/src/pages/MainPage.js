@@ -1,6 +1,7 @@
 import React from 'react';
-import {View,Text, SafeAreaView,StyleSheet,Image, ScrollView} from 'react-native';
-import Merkur from  "./Merkur"
+import {View,Text, SafeAreaView,StyleSheet,Image, ScrollView, TouchableOpacity} from 'react-native';
+
+import PlanetNames from "./PlanetNames"
 
 const MainPage =()=>{
  
@@ -20,45 +21,64 @@ const MainPage =()=>{
         </View>   
 
          <View>
-          <Text > {"\n"}Solar System</Text>
+          <Text  style={{alignSelf:"center",fontSize:20}}> {"\n"}Solar System</Text>
         
           <View style={{flex:1,flexDirection:"row",flexWrap:"wrap",justifyContent:"center",alignItems:"center"}}>
-           
+            <TouchableOpacity>
               <View style={styles.planetContainer}>
                 <Image style={styles.planetStyle} source={require("./images/merkur.png")}></Image>
-                <Text sytle={styles.planetInnerStyle}>Mercury</Text>
+                <PlanetNames title="Mercury"/>
               </View>  
+            </TouchableOpacity>
 
+            <TouchableOpacity>
               <View>
                 <Image style={styles.planetStyle} source={require("./images/venus.png")}></Image>
-                <Text sytle={styles.planetInnerStyle}>Venus</Text>
+                <PlanetNames title="Venus"/>
               </View>  
-
+            </TouchableOpacity>
+              
+            <TouchableOpacity>
               <View>
                 <Image style={styles.planetStyle} source={require("./images/earth.png")}></Image>
-                <Text sytle={styles.planetInnerStyle}>Earth</Text>
+                <PlanetNames title="Earth"/>
               </View> 
+            </TouchableOpacity>
+
+            <TouchableOpacity>
               <View>
                 <Image style={styles.planetStyle} source={require("./images/mars.png")}></Image>
-                <Text sytle={styles.planetInnerStyle}>Mars</Text>
+                <PlanetNames title="Mars"/>
               </View> 
+            </TouchableOpacity>
+
+            <TouchableOpacity>
               <View>
                 <Image style={styles.planetStyle} source={require("./images/jupiter.png")}></Image>
-                <Text sytle={styles.planetInnerStyle}>Jupiter</Text>
-              </View> 
+                <PlanetNames title="Jupiter"/>
+              </View>
+            </TouchableOpacity> 
+
+            <TouchableOpacity>
               <View>
                 <Image style={styles.planetStyle} source={require("./images/saturn.png")}></Image>
-                <Text sytle={styles.planetInnerStyle}>Saturn</Text>
+                <PlanetNames title="Saturn"/>
               </View> 
+            </TouchableOpacity>
+
+            <TouchableOpacity>
               <View>
                 <Image style={styles.planetStyle} source={require("./images/uranus.png")}></Image>
-                <Text sytle={styles.planetInnerStyle}>Uranus</Text>
+                <PlanetNames title="Uranus"/>
               </View> 
+            </TouchableOpacity>
+
+            <TouchableOpacity>
               <View>
                 <Image style={styles.planetStyle} source={require("./images/neptune.png")}></Image>
-                <Text sytle={styles.planetInnerStyle}>Neptune</Text>
+                <PlanetNames title="Neptune"/>
               </View> 
-            
+            </TouchableOpacity>
           </View>   
           
         </View>
@@ -91,7 +111,8 @@ const styles=StyleSheet.create({
  },
 planetInnerStyle:{
   fontFamily:"Limelight-Regular",
-  marginLeft:20
+  marginLeft:20,
+  alignSelf:"center"
   
 },
 planetContianer:{
