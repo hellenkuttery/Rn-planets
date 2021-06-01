@@ -1,2 +1,2 @@
 # Rn-planet
-![solar_system]"("./src/pages/images/mobilePlanet.png")
+![solar_system]("./src/pages/images/mobilePlanet.png")
