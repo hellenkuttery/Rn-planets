@@ -12,7 +12,7 @@ const Merkur =()=>{
        </View>
 
        <View style={{backgroundColor:"red"}}>
-           <Text>Merkur</Text>
+           <Text>Merkur planet</Text>
        </View>
 
     </SafeAreaView>

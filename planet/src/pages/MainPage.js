@@ -1,5 +1,5 @@
 import React from 'react';
-import {View,Text, SafeAreaView,StyleSheet,Image} from 'react-native';
+import {View,Text, SafeAreaView,StyleSheet,Image, ScrollView} from 'react-native';
 import Merkur from  "./Merkur"
 
 const MainPage =()=>{
@@ -7,6 +7,7 @@ const MainPage =()=>{
 
   return (
     <SafeAreaView  style={styles.container} >
+      <ScrollView>
         <View >
             <View> 
               <Text style={styles.textStyle}>Planets</Text>  
@@ -19,14 +20,49 @@ const MainPage =()=>{
         </View>   
 
          <View>
-          <Text > {"\n"}Planet List</Text>
-              <View>
+          <Text > {"\n"}Solar System</Text>
+        
+          <View style={{flex:1,flexDirection:"row",flexWrap:"wrap",justifyContent:"center",alignItems:"center"}}>
+           
+              <View style={styles.planetContainer}>
                 <Image style={styles.planetStyle} source={require("./images/merkur.png")}></Image>
                 <Text sytle={styles.planetInnerStyle}>Mercury</Text>
+              </View>  
+
+              <View>
+                <Image style={styles.planetStyle} source={require("./images/venus.png")}></Image>
+                <Text sytle={styles.planetInnerStyle}>Venus</Text>
+              </View>  
+
+              <View>
+                <Image style={styles.planetStyle} source={require("./images/earth.png")}></Image>
+                <Text sytle={styles.planetInnerStyle}>Earth</Text>
               </View> 
-              
-          </View>
-      
+              <View>
+                <Image style={styles.planetStyle} source={require("./images/mars.png")}></Image>
+                <Text sytle={styles.planetInnerStyle}>Mars</Text>
+              </View> 
+              <View>
+                <Image style={styles.planetStyle} source={require("./images/jupiter.png")}></Image>
+                <Text sytle={styles.planetInnerStyle}>Jupiter</Text>
+              </View> 
+              <View>
+                <Image style={styles.planetStyle} source={require("./images/saturn.png")}></Image>
+                <Text sytle={styles.planetInnerStyle}>Saturn</Text>
+              </View> 
+              <View>
+                <Image style={styles.planetStyle} source={require("./images/uranus.png")}></Image>
+                <Text sytle={styles.planetInnerStyle}>Uranus</Text>
+              </View> 
+              <View>
+                <Image style={styles.planetStyle} source={require("./images/neptune.png")}></Image>
+                <Text sytle={styles.planetInnerStyle}>Neptune</Text>
+              </View> 
+            
+          </View>   
+          
+        </View>
+        </ScrollView>    
     </SafeAreaView>
   )
 }
@@ -50,10 +86,18 @@ const styles=StyleSheet.create({
   },
  planetStyle:{
    height:120,
-   width:120,
-   
+   width:120,  
+   margin:20
  },
-
+planetInnerStyle:{
+  fontFamily:"Limelight-Regular",
+  marginLeft:20
+  
+},
+planetContianer:{
+ 
+  
+}
 
 
 });
