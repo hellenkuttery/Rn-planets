@@ -10,10 +10,12 @@ const MainPage =()=>{
     <SafeAreaView  style={styles.container} >
       <ScrollView>
         <View >
+          
             <View> 
               <Text style={styles.textStyle}>Planets</Text>  
               <Text>Solar System</Text>  
             </View>
+          
         </View> 
 
         <View>
@@ -21,8 +23,9 @@ const MainPage =()=>{
         </View>   
 
          <View>
+         <TouchableOpacity>
           <Text  style={{alignSelf:"center",fontSize:20}}> {"\n"}Solar System</Text>
-        
+        </TouchableOpacity>
           <View style={{flex:1,flexDirection:"row",flexWrap:"wrap",justifyContent:"center",alignItems:"center"}}>
             <TouchableOpacity>
               <View style={styles.planetContainer}>
